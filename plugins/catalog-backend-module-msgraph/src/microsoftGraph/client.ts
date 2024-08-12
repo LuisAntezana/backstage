@@ -362,7 +362,7 @@ export class MicrosoftGraphClient {
     queryMode?: 'basic' | 'advanced',
   ): AsyncIterable<MicrosoftGraph.User> {
     yield* this.requestCollection<MicrosoftGraph.User>(
-      `groups/${groupId}/members/microsoft.graph.user/`,
+      `groups/${groupId}/transitiveMembers/microsoft.graph.user/`,
       query,
       queryMode,
     );
